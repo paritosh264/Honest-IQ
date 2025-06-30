@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+        /* background-image: url("C:\\Users\\parit\\the_genius_coder\\my_webd_researches\\static\\bg.avif"); */
+        /* background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; */
+        background-color: rgb(240, 212, 160);
+    }
+
+    .reg {
+        background: rgba(212, 4, 4, 0.2);
+        height: 400px;
+        width: 300px;
+        margin: 100px auto;
+        border: 4px solid rgba(225, 225, 225, 0.2);
+        border-radius: 15px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(2px);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .reg input {
+        margin: 10px 0;
+        height: 30px;
+        width: 90%;
+        border-radius: 8px;
+        border: 2px solid black;
+        padding: 5px;
+    }
+
+    .reg input::placeholder {
+        color: black;
+        font-size: larger;
+    }
+
+    .reg button {
+        margin-top: 20px;
+        height: 30px;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.25);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="reg">
+    <h3>PLEASE ENTER YOUR CREDENTIALS</h3>
+    <form action="/start" method="POST">
+        <input type="text" name="regno" placeholder="Enter your registration number..." required>
+        <input type="text" name="name" placeholder="Enter your name..." required>
+        <button type="submit">START</button>
+    </form>
+  </div>
+</body>
+</html>

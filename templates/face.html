@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Webcam Feed</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+      flex-direction: column;
+    }
+    video {
+      border: 2px solid #333;
+      border-radius: 10px;
+      width: 640px;
+      height: 480px;
+      background: black;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- cvzone -->
+
+  <h1>My Live Webcam</h1>
+  <video id="video" autoplay playsinline></video>
+
+  <script>
+    const video = document.getElementById('video');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(br=> {
+        
+        video.srcObject = br;
+      })
+      .catch(err => {
+        console.error("Error accessing webcam:", err);
+      });
+  </script>
+
+</body>
+</html>
