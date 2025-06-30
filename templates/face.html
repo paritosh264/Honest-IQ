@@ -31,18 +31,7 @@
   <h1>My Live Webcam</h1>
   <video id="video" autoplay playsinline></video>
 
-  <script>
-    const video = document.getElementById('video');
-
-    navigator.mediaDevices.getUserMedia({ video: true })
-      .then(br=> {
-        
-        video.srcObject = br;
-      })
-      .catch(err => {
-        console.error("Error accessing webcam:", err);
-      });
-  </script>
+  <script src="face_obj.js"></script>
 
 </body>
 </html>
